@@ -1,3 +1,7 @@
+# New Features
+
+- Dark Theme
+
 # Dados técnicos
 
 - Usando Graphql no backend e no frontend
@@ -26,6 +30,10 @@ Foi o melhor compilado de dados que encontrei.
 ### Print 4
 
 ![print4](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home4.png)
+
+### Dark Theme
+
+![print4](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home1-dark.png)
 
 ### Como o sistema realiza a projeção de casos ?
 
