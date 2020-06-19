@@ -7,18 +7,26 @@ import {
 	Select,
 	Button,
 	ContainerBottom,
+	ContainerDark,
 } from './style';
+
+import { FaRegMoon } from 'react-icons/fa';
 
 import { useData } from '../../context/Data';
 
 function Header() {
-	const { updateData, setFilter } = useData();
+	const { updateData, setFilter, setTheme, theme } = useData();
 	function changeHandler(e) {
 		const value = e.currentTarget.selectedOptions[0].attributes.value.nodeValue;
 		const type = e.currentTarget.selectedOptions[0].attributes.type.nodeValue;
 		let obj = {};
 		obj[type] = value;
 		setFilter(obj);
+	}
+
+	function handleTheme() {
+		if (theme === 'light') setTheme('dark');
+		else setTheme('light');
 	}
 
 	return (
@@ -154,6 +162,11 @@ function Header() {
 					</Item>
 				</ContainerBottom>
 			</Container>
+			<ContainerDark>
+				<Item>
+					<FaRegMoon onClick={handleTheme} />
+				</Item>
+			</ContainerDark>
 		</StyledHeader>
 	);
 }

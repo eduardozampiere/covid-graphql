@@ -2,11 +2,13 @@ import React from 'react';
 import Header from '../Header';
 import Main from '../Main';
 
-import GlobalStyles from './global'; 
+import GlobalStyles from './global';
+import { useData } from '../../context/Data';
 function Container() {
+	const { theme } = useData();
 	return (
 		<>
-			<GlobalStyles theme="light"/>
+			<GlobalStyles theme={theme} />
 			<Header />
 			<Main />
 		</>

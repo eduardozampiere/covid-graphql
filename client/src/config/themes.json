@@ -1,111 +1,129 @@
 {
-    "pageThemes": {
-        "light": {
-            "lightGray": "#f5f5f5",
-            "gray": "#e4e6e8",
-            "darkGray": "#8c979f",
-            "blue": "#447cff",
-            "lightBlue": "#5ac7ff",
-            "black": "#20262c",
-            "red": "#f45b5b",
-            "white": "#fff"
-        },
-        "dark": {
-            "lightGray": "#f5f5f5",
-            "gray": "#e4e6e8",
-            "darkGray": "#8c979f",
-            "blue": "#447cff",
-            "lightBlue": "#5ac7ff",
-            "black": "#eee",
-            "red": "#f45b5b",
-            "white": "#3e3e40"
-        }
-    },
+	"pageThemes": {
+		"light": {
+			"lightGray": "#f5f5f5",
+			"gray": "#e4e6e8",
+			"darkGray": "#8c979f",
+			"blue": "#447cff",
+			"lightBlue": "#5ac7ff",
+			"black": "#20262c",
+			"red": "#f45b5b",
+			"white": "#fff"
+		},
+		"dark": {
+			"lightGray": "#555",
+			"gray": "#888",
+			"darkGray": "#8c979f",
+			"blue": "#447cff",
+			"lightBlue": "#5ac7ff",
+			"black": "#eee",
+			"red": "#f45b5b",
+			"white": "#3e3e40"
+		}
+	},
 
-    "chartThemes": {
-        "light": {
-            "colors": ["#f45b5b", "#447cff", "#00FF7F", "#FF00FF", "#FFD700", "#228B22", "#008B8B"],
-            "chart": {
-                "backgroundColor": {
-                    "linearGradient": [0, 0, 500, 500],
-                    "stops": [
-                        [0, "#fff"],
-                        [1, "#fefefe"]
-                    ]
-                }
-            },
+	"chartThemes": {
+		"light": {
+			"colors": [
+				"#f45b5b",
+				"#447cff",
+				"#00FF7F",
+				"#FF00FF",
+				"#FFD700",
+				"#228B22",
+				"#008B8B"
+			],
+			"chart": {
+				"backgroundColor": {
+					"linearGradient": [0, 0, 500, 500],
+					"stops": [
+						[0, "#fff"],
+						[1, "#fefefe"]
+					]
+				}
+			},
 
-            "xAxis": {
-                "labels": {
-                    "style": {
-                        "color": "#20262c"
-                    }
-                }
-            },
+			"xAxis": {
+				"labels": {
+					"style": {
+						"color": "#20262c"
+					}
+				}
+			},
 
-            "yAxis": {
-                "labels": {
-                    "style": {
-                        "color": "#20262c"
-                    }
-                }
-            },
+			"yAxis": {
+				"labels": {
+					"style": {
+						"color": "#20262c"
+					}
+				}
+			},
 
-            "title": {
-                "style": {
-                    "color": "#20262c"
-                }
-            },
+			"title": {
+				"style": {
+					"color": "#20262c"
+				}
+			},
 
-            "legend": {
-                "itemStyle": {
-                    "color": "#20262c"
-                },
-                "itemHoverStyle":{
-                    "color": "#8c979f"
-                }   
-            }
-        },
+			"legend": {
+				"itemStyle": {
+					"color": "#20262c"
+				},
+				"itemHoverStyle": {
+					"color": "#8c979f"
+				}
+			}
+		},
 
-        "dark": {
-            "chart": {
-                "backgroundColor": {
-                    "linearGradient": [0, 0, 500, 500],
-                    "stops": [
-                        [0, "#3e3e40"],
-                        [1, "#3e3e40"]
-                    ]
-                }
-            },
-            "xAxis": {
-                "labels": {
-                    "style": {
-                        "color": "#fefefe"
-                    }
-                }
-            },
+		"dark": {
+			"colors": [
+				"#f45b5b",
+				"#447cff",
+				"#00FF7F",
+				"#FF00FF",
+				"#FFD700",
+				"#228B22",
+				"#008B8B"
+			],
 
-            "yAxis": {
-                "labels": {
-                    "style": {
-                        "color": "#fefefe"
-                    }
-                }
-            },
-            "title": {
-                "style": {
-                    "color": "#fefefe"
-                }
-            },
+			"chart": {
+				"backgroundColor": {
+					"linearGradient": [0, 0, 500, 500],
+					"stops": [
+						[0, "#3e3e40"],
+						[1, "#3e3e40"]
+					]
+				}
+			},
+			"xAxis": {
+				"labels": {
+					"style": {
+						"color": "#fefefe"
+					}
+				}
+			},
 
-            "legend": {
-                "itemStyle": {
-                    "color": "#fefefe"
-                },
-                "itemHoverStyle":{
-                    "color": "#ddd"
-                }   
-            }
-        }
-    }
+			"yAxis": {
+				"labels": {
+					"style": {
+						"color": "#fefefe"
+					}
+				}
+			},
+			"title": {
+				"style": {
+					"color": "#fefefe"
+				}
+			},
+
+			"legend": {
+				"itemStyle": {
+					"color": "#fefefe"
+				},
+				"itemHoverStyle": {
+					"color": "#ddd"
+				}
+			}
+		}
+	}
 }

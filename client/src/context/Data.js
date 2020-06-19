@@ -14,7 +14,7 @@ const DataContext = createContext();
 export default function DataProvider({ children }) {
 	const [data, setData] = useState(null);
 	const [filter, setFilter] = useState({});
-
+	const [theme, setTheme] = useState('dark');
 	const updateData = async () => {
 		const responseUpdate = await api.update();
 		await loadData(filter);
@@ -228,6 +228,8 @@ export default function DataProvider({ children }) {
 				formatPercent,
 				formatDate,
 				updateData,
+				setTheme,
+				theme,
 			}}
 		>
 			{children}

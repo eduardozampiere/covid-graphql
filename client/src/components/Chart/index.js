@@ -1,65 +1,63 @@
 import React, { useEffect } from 'react';
 import Highcharts from 'highcharts';
 import { chartThemes } from '../../config/themes.json';
+import { useData } from '../../context/Data';
 
-function Chart({data, id, type, stacked}) {
-	useEffect( () => {
-		if(!data) return () => {}
+function Chart({ data, id, type, stacked }) {
+	const { theme } = useData();
+
+	useEffect(() => {
+		if (!data) return () => {};
 		const infecteds = [];
 		const deads = [];
-		Object.keys(data).map( date => {
-			if(typeof data[date] === 'object'){
+		Object.keys(data).map((date) => {
+			if (typeof data[date] === 'object') {
 				infecteds.push([date, data[date].infecteds]);
 				deads.push([date, data[date].deads]);
+			} else {
+				deads.push([date, data[date]]);
 			}
-
-			else{
-				deads.push([date, data[date]])
-			}
-
 		});
-		
+
 		const opt = {
 			chart: {
-				type: type
+				type: type,
 			},
 			title: {
-				text: ''
+				text: '',
 			},
 
 			xAxis: {
-				type: 'category'
+				type: 'category',
 			},
 
 			series: [
 				{
 					name: 'Mortes',
-					data: deads
-				}
-			]
-		}
+					data: deads,
+				},
+			],
+		};
 
-		if(infecteds.length > 0){
+		if (infecteds.length > 0) {
 			opt.series.push({
 				name: 'Casos',
-				data: infecteds
+				data: infecteds,
 			});
 		}
 
-		if(stacked){
+		if (stacked) {
 			opt.plotOptions = {
 				column: {
-					stacking: 'stream'
-				}
-			}
+					stacking: 'stream',
+				},
+			};
 		}
-		Highcharts.theme = chartThemes['light'];
-		Highcharts.setOptions(Highcharts.theme)
+		Highcharts.theme = chartThemes[theme];
+		Highcharts.setOptions(Highcharts.theme);
 		Highcharts.chart(id, opt);
-	}, [data]);
-	return (
-		<div id={id}></div>
-	);
+	}, [data, theme]);
+	return <div id={id}></div>;
 }
 
 export default Chart;
