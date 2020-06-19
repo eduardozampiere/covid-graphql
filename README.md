@@ -11,10 +11,10 @@ Foi o melhor compilado de dados que encontrei.
 
 ## Prints
 
-![print1](https://github.com/eduardozampiere/covid/blob/master/prints/home1.png)
-![print2](https://github.com/eduardozampiere/covid/blob/master/prints/home2.png)
-![print3](https://github.com/eduardozampiere/covid/blob/master/prints/home3.png)
-![print4](https://github.com/eduardozampiere/covid/blob/master/prints/home4.png)
+![print1](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home1.png)
+![print2](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home2.png)
+![print3](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home3.png)
+![print4](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home4.png)
 
 ### Como o sistema realiza a projeção de casos ?
 
