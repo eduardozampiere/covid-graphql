@@ -11,9 +11,20 @@ Foi o melhor compilado de dados que encontrei.
 
 ## Prints
 
+### Print 1
+
 ![print1](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home1.png)
+
+### Print 2
+
 ![print2](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home2.png)
+
+### Print 3
+
 ![print3](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home3.png)
+
+### Print 4
+
 ![print4](https://github.com/eduardozampiere/covid-graphql/blob/master/prints/home4.png)
 
 ### Como o sistema realiza a projeção de casos ?
