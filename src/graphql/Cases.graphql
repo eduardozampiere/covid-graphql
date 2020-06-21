@@ -1,0 +1,21 @@
+type Case {
+	_id: ID!
+	infecteds: Int!
+	deads: Int!
+	state: String!
+	date: String!
+	region: String!
+}
+
+input CaseInput {
+	state: String
+	region: String
+}
+
+type Mutation {
+	updateCases: Int
+}
+
+type Query {
+	getCases(caseInput: CaseInput): [Case!]!
+}
