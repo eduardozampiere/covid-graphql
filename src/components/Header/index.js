@@ -158,10 +158,10 @@ function Header() {
 					</Item>
 
 					<Item float="right">
-						{process.env.PRODUCTION ? (
-							''
-						) : (
+						{process.env.DEV ? (
 							<Button onClick={updateData}>Atualizar</Button>
+						) : (
+							''
 						)}
 					</Item>
 				</ContainerBottom>
