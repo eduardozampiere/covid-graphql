@@ -5,6 +5,9 @@ import { caseResolvers } from '../../src/graphql/resolvers';
 import { caseMutations } from '../../src/graphql/mutations';
 import Cases from '../../src/graphql/Cases.graphql';
 
+import cors from 'micro-cors';
+const Cors = cors();
+
 const resolvers = mergeResolvers([caseResolvers, caseMutations]);
 
 const typeDefs = mergeTypeDefs([Cases]);
@@ -21,8 +24,12 @@ export const config = {
 	},
 };
 
-const server = apolloServer.createHandler({
+const handler = apolloServer.createHandler({
 	path: '/api/graphql',
+});
+
+const server = Cors((req, res) => {
+	req.method === 'OPTIONS' ? res.end() : handler(req, res);
 });
 
 export default connectionMongo(server);
