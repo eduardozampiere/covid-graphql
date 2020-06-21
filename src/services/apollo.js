@@ -37,9 +37,6 @@ function initApolloClient(initialState = {}) {
 		uri: process.env.API_URL,
 		cache,
 		fetch,
-		fetchOptions: {
-			mode: 'no-cors',
-		},
 	});
 
 	return client;
