@@ -157,13 +157,13 @@ function Header() {
 						</Select>
 					</Item>
 
-					<Item float="right">
-						{process.env.DEV ? (
+					{process.env.DEV ? (
+						<Item float="right">
 							<Button onClick={updateData}>Atualizar</Button>
-						) : (
-							''
-						)}
-					</Item>
+						</Item>
+					) : (
+						''
+					)}
 				</ContainerBottom>
 			</Container>
 			<ContainerDark>
