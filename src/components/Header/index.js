@@ -158,7 +158,11 @@ function Header() {
 					</Item>
 
 					<Item float="right">
-						<Button onClick={updateData}>Atualizar</Button>
+						{process.env.PRODUCTION ? (
+							''
+						) : (
+							<Button onClick={updateData}>Atualizar</Button>
+						)}
 					</Item>
 				</ContainerBottom>
 			</Container>

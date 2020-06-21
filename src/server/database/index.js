@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise;
 
 const connectDB = (handler) => async (req, res) => {
 	if (mongoose.connections[0].readyState !== 1) {
-		await mongoose.connect('mongodb://localhost/covidGraphql', {
+		await mongoose.connect(process.env.MONGO_URL, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});

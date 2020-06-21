@@ -12,10 +12,12 @@ import gql from 'graphql-tag';
 const DataContext = createContext();
 
 export default function DataProvider({ children }) {
-	const [data, setData] = useState(null);
+	const [data, setData] = useState({});
 	const [filter, setFilter] = useState({});
 	const [theme, setTheme] = useState('dark');
 	const client = useApolloClient();
+	const [loading, setLoading] = useState(true);
+
 	const updateData = async () => {
 		const responseUpdate = await client.mutate({
 			mutation: gql`
@@ -34,6 +36,7 @@ export default function DataProvider({ children }) {
 	};
 
 	const loadData = useCallback(async (filter) => {
+		setLoading(true);
 		try {
 			const response = await client.query({
 				query: gql`
@@ -219,6 +222,7 @@ export default function DataProvider({ children }) {
 		totalCase.lastInfecteds = totalCase.perNewDay[totalCase.lastDay].infecteds;
 		totalCase.lastDeads = totalCase.perNewDay[totalCase.lastDay].deads;
 		setData(totalCase);
+		setLoading(false);
 	}, []);
 
 	const formatNumber = (value) => {
@@ -234,6 +238,7 @@ export default function DataProvider({ children }) {
 	};
 
 	const formatDate = (date) => {
+		if (!date) return '';
 		return date.split('-').reverse().join('/');
 	};
 
@@ -256,6 +261,7 @@ export default function DataProvider({ children }) {
 				updateData,
 				setTheme,
 				theme,
+				loading,
 			}}
 		>
 			{children}

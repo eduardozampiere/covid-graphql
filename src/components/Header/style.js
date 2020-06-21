@@ -80,6 +80,7 @@ export const Button = styled.button`
 	padding: 10px 15px;
 	border-radius: 4px;
 	box-shadow: 1px 1px 2px var(--dark-gray);
+	cursor: pointer;
 	@media (max-width: 767px) {
 		margin-right: 10px;
 	}

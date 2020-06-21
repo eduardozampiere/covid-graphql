@@ -4,10 +4,10 @@ import { useData } from '../../context/Data';
 import { chartThemes } from '../../config/themes.json';
 
 function PieChart({ data }) {
-	const { formatNumber, formatPercent, theme } = useData();
+	const { formatNumber, formatPercent, theme, loading } = useData();
 
 	useEffect(() => {
-		if (!data) return () => {};
+		if (loading) return () => {};
 
 		const dataSet = Object.keys(data).map((region) => {
 			return {
@@ -41,10 +41,10 @@ function PieChart({ data }) {
 				},
 			],
 		});
-	}, [data, theme]);
+	}, [data, theme, loading]);
 
-	if (!data) {
-		return <p>loading</p>;
+	if (loading) {
+		return <p>Carregando dados</p>;
 	}
 
 	return <div id="pieChart"></div>;

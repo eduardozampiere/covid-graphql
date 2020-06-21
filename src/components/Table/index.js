@@ -2,13 +2,15 @@ import React from 'react';
 import { useData } from '../../context/Data';
 import { StyledTable } from './style';
 function Table() {
-
-	const { data, formatNumber } = useData();
-	function renderTable(){
-		return Object.keys(data.perState).map( state => {
+	const { data, formatNumber, loading } = useData();
+	function renderTable() {
+		return Object.keys(data.perState).map((state) => {
 			return (
 				<tr key={state}>
-					<td> <b>{state}</b> </td>
+					<td>
+						{' '}
+						<b>{state}</b>{' '}
+					</td>
 					<td> {formatNumber(data.perState[state].infecteds)} </td>
 					<td> {formatNumber(data.perState[state].deads)} </td>
 				</tr>
@@ -16,11 +18,11 @@ function Table() {
 		});
 	}
 
-	if(!data){
-		return <p>Loading</p>
+	if (loading) {
+		return <p>Carregando dados</p>;
 	}
 
-	return(
+	return (
 		<StyledTable>
 			<thead>
 				<tr>
@@ -29,11 +31,9 @@ function Table() {
 					<th>Mortes</th>
 				</tr>
 			</thead>
-			<tbody>
-				{renderTable()}
-			</tbody>
+			<tbody>{renderTable()}</tbody>
 		</StyledTable>
-	) ;
+	);
 }
 
 export default Table;
