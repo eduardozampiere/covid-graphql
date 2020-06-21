@@ -4,8 +4,10 @@
 
 # Dados técnicos
 
-- Usando Graphql no backend e no frontend
-- Feito com Next.js
+- Next.js
+- Apollo Micro Server
+- Apollo Client
+- GraphQL
 
 # Acompanhamento de casos da Covid-19
 
