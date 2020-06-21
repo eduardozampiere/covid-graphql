@@ -12,6 +12,7 @@ const typeDefs = mergeTypeDefs([Cases]);
 const apolloServer = new ApolloServer({
 	typeDefs,
 	resolvers,
+	cors: false,
 });
 
 export const config = {
