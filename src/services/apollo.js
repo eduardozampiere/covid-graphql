@@ -34,7 +34,7 @@ export function withApollo(PageComponent) {
 function initApolloClient(initialState = {}) {
 	const cache = new InMemoryCache().restore(initialState);
 	const client = new ApolloClient({
-		uri: 'http://localhost:3000/api/graphql',
+		uri: process.env.API_URL,
 		cache,
 		fetch,
 	});
